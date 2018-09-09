@@ -3,23 +3,21 @@ $(document).ready(function(){
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip()
 	});
-
+	//parallax
 	$('.parallax-window').parallax({imageSrc: 'image/bg-1.jpg'});
-	console.log('ready');
-	$(document).on("scroll", onScroll);
-	
+	$('.parallax-window2').parallax({imageSrc: 'image/bg-2.jpg'});
+		
+	$(document).on("scroll", onScroll);	
 
 	$('a[href^="#"]').on('click', function(e) {
 		e.preventDefault();		
 		$(document).off("scroll");
 
-		$('a').each(function() {
-			// $(this).removeClass('active');
+		$('a').each(function() {			
 			if($(this).parent().hasClass('nav-item')){
 				$(this).parent().removeClass('active')
 			}
-		})
-		// $(this).addClass('active')
+		})	
 
 		$(this).each(function(){
 			if($(this).parent().hasClass('nav-item')){
@@ -33,7 +31,7 @@ $(document).ready(function(){
             'scrollTop': $target.offset().top-100
         }, 550, 'swing', function () {
 			window.location.hash = target+100;
-			console.log(target)
+			// console.log(target)
             $(document).on("scroll", onScroll);
         });
 	});	
@@ -43,28 +41,15 @@ $(document).ready(function(){
 // 針對目前位置對sidebar做出變化
 function onScroll(event){
 	let scrollPos = $(document).scrollTop();
-	// console.log('scrollPos', scrollPos)
-	//側選單
-	// $(".list-group>li>a").each(function() {
-	// 	let currentLink = $(this);
-	// 	let refElement = $(currentLink.attr('href'));
-	// 	console.log('refElement.postion', refElement.position().top)
-	// 	console.log('refElement.height', refElement.height())
-	// 	if(refElement.position().top <= scrollPos-600 && refElement.position().top + refElement.height() > scrollPos-600){
-	// 		$('.list-group>li>a').removeClass('active');
-	// 		currentLink.addClass('active')
-	// 	}else{
-	// 		currentLink.removeClass('active')
-	// 	}
-	// });
+	// console.log('scrollPos', scrollPos)	
 
 	//上方導覽列
 	$(".navbar-nav>li>a").each(function() {
-		let currentLink = $(this);
-		let refElement = $(currentLink.attr('href'));
-		console.log('refElement.postion', refElement.position().top)
-		console.log('refElement.height', refElement.height())
-		if(refElement.position().top <= scrollPos-600 && refElement.position().top + refElement.height() > scrollPos-600){
+		let currentLink = $(this);		
+		let refElement = $(currentLink.attr('href'));		
+		// console.log('refElement.postion', refElement.offset().top)
+		// console.log('refElement.height', refElement.height())
+		if(refElement.offset().top <= scrollPos+330 && refElement.offset().top + refElement.height() > scrollPos+330){
 			$('.navbar-nav>li').removeClass('active');
 			currentLink.parent().addClass('active')
 		}else{

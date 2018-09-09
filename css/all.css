@@ -1,15 +1,31 @@
 body{
 	font-family: DFKai-sb;
 }
+/* parallax外掛元件設定 */
+.parallax-window{
+	padding: 300px 0;
+}
+.parallax-window2{
+	background-color: rgba(138, 151, 153, 0.6);
+}
 
+/* 各段落設定 */
+#about{
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+#skills .h2 {
+	color: rgb(211, 200, 255);
+}
+
+
+/* 上方個人資料連結 */
 .outerlink{
 	margin-top: 100px;
 }
-
 .outerlink a{
 	text-decoration: none;
 }
-
 .outerlink a:first-child i{
 	display:inline-block;
 	border-radius: 50px;
@@ -18,7 +34,6 @@ body{
 	color: rgb(28, 108, 212);
 	transition: all 0.8s;
 }
-
 .outerlink a i, span.sp-outerlink{
 	display:inline-block;
 	border-radius: 50px;
@@ -27,27 +42,38 @@ body{
 	color: rgb(0, 0, 0, .8);
 	transition: all 0.8s;
 }
-
 .outerlink a i:hover{
   	background-color: rgba(0, 0, 0, .6);	
 	color: #fff;
 	transform: rotate(360deg);
 }
-
 span.sp-outerlink:hover{
 	background-color: rgba(0, 0, 0, .6);	
 	color: #fff;
 	cursor: pointer;
 }
 
+/* 導覽列 */
+.navbar{
+	background-color: rgba(0, 0, 0, .75);
+}
+.navbar-brand .img-profile {
+	max-height: 6rem;
+	max-width:  6rem;
+	border: .5rem solid rgba(255, 255, 255, .2);
+}
+.nav-item.active a{
+	color: #FFF !important;
+}
 .nav-item a:hover{
 	color: #FFF !important;		
 }
-
 .nav-item{
 	position: relative;
 }
-
+.nav-item .nav-link{
+	color: rgba(255, 255, 255, .5) !important;
+}
 .nav-item.active::before{
 	content:'';
 	position: absolute;
@@ -57,73 +83,57 @@ span.sp-outerlink:hover{
 	color: #FFF !important;	
 	border-bottom: 5px solid #FFF;
 }
-
 .nav-bom2.active::before{	
 	left: 3px;
 	padding: 3rem;
 }
-
 .nav-bom3.active::before{	
 	left: 3px;	
 }
 
 
-.navbar-brand .img-profile {
-	max-height: 6rem;
-	max-width:  6rem;
-	border: .5rem solid rgba(255, 255, 255, .2);
-}
-
-a.nav-link{
-	color: rgba(255, 255, 255, .5) !important;
-}
-
-li.nav-item.active a{
-	color: #FFF !important;
-}
-
+/* 卡片元件 */
 .card {
 	box-shadow: 6px 8px rgba(0, 0, 0, .15);
+	background-color: rgba(255, 255, 255, .9);
 	/*transition: box-shadow .05s;*/
 }
-
 .card.card-work:hover {
 	box-shadow: 2px 4px rgba(0, 0, 0, .3);	
 }
-
-.sidebar{
-	top: 7rem;
-}
-
 .a_nostyle:link{
 	color: #000;
 }
-
 .a_nostyle:hover{
 	text-decoration: none;
 }
 
-/* ul.list-group.list-group-flush{
-	min-width: 10rem;
-} */
-
-.list-group-item{
-	padding: 0.5rem 0.25rem;
-	border: 0;
+/* footer */
+.outerfoot a{
+	text-decoration: none;
 }
-
-.text-muted.active {
-	color: blue !important;
+.outerfoot a:first-child i{
+	display:inline-block;
+	border-radius: 25px;
+  	background-color: rgba(255, 255, 255, .5);
+	padding: 1.21rem 1.71rem;
+	color: rgb(0, 0, 0, .8);
+	transition: all 0.8s;
 }
-
-#about{
-	font-size: 1.5rem;
-	line-height: 2.5rem;
+.outerfoot a i, span.sp-outerfoot{
+	display:inline-block;
+	border-radius: 25px;
+  	background-color: rgba(255, 255, 255, .5);
+	padding: 1.25rem 1.25rem;
+	color: rgb(0, 0, 0, .8);
+	transition: all 0.8s;
 }
-
-#require p{
-	font-size: 1.5rem;
+.outerfoot a i:hover{
+  	background-color: rgba(0, 0, 0, .6);	
+	color: #fff;	
 }
-.parallax-window{
-	padding: 300px 0;
+span.sp-outerfoot:hover{
+	background-color: rgba(0, 0, 0, .6);	
+	color: #fff;
+	cursor: pointer;
 }
