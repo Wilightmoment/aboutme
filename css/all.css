@@ -17,7 +17,12 @@ body{
 #skills .h2 {
 	color: rgb(211, 200, 255);
 }
-
+#contact textarea{
+	resize: none;
+}
+#contact .contact_info{
+	font-size: 1.25rem;
+}
 
 /* 上方個人資料連結 */
 .outerlink{
@@ -58,8 +63,8 @@ span.sp-outerlink:hover{
 	background-color: rgba(0, 0, 0, .75);
 }
 .navbar-brand .img-profile {
-	max-height: 6rem;
-	max-width:  6rem;
+	max-height: 5rem;
+	max-width:  5rem;
 	border: .5rem solid rgba(255, 255, 255, .2);
 }
 .nav-item.active a{
@@ -88,7 +93,11 @@ span.sp-outerlink:hover{
 	padding: 3rem;
 }
 .nav-bom3.active::before{	
-	left: 3px;	
+	left: 3px;
+}
+.nav-bom4.active::before{	
+	left: 3px;
+	padding: 3.5rem;
 }
 
 

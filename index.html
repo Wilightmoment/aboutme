@@ -3,8 +3,19 @@
 
 <head>
 	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="image/Y.png" />
+	<meta name='description' content='YINGRAN的個人資料，個人簡歷' />
+	<meta name="keywords" content="YINGRAN, 一頁式簡歷, 個人簡歷, 簡歷模板, profile, personal introduction, RESUME">
+
+	<meta property="og:title" content="YINGRANの簡歷" />
+	<meta property="og:description" content="一頁式簡歷 by YING-RAN">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="index.html" />
+	<meta property="og:image" content="image/my-200.jpg" />
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -23,10 +34,10 @@
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 		<a class="navbar-brand" href="#">
 			<span class="d-block">
-				<img src="image/my2.jpg" class="img-fluid img-profile rounded-circle mx-auto" alt="">
+				<img src="image/my.jpg" class="img-fluid img-profile rounded-circle mx-auto" alt="">
 			</span>
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		<button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -41,6 +52,9 @@
 				</li>
 				<li class="nav-item nav-bom3">
 					<a class="nav-link" href="#works">Works</a>
+				</li>
+				<li class="nav-item nav-bom4">
+					<a class="nav-link" href="#contact">Contact</a>
 				</li>
 		</div>
 	</nav>
@@ -67,9 +81,9 @@
 		</div>
 
 		<!-- about -->
-		<div class="row">
+		<div id="about" class="row">
 			<div class="col-8 offset-2">
-				<section id="about" class="my-5 py-5 text-center">
+				<section class="my-5 py-5 text-center">
 					<p class="h2 my-4 text-info">哈囉~大家好</p>
 					<p class="mb-5" id="about">
 						我是陳穎然，目前專攻前端技術已有三個月左右~<br> 平時會逛逛技術社群，看看別人遇到的問題或是作品
@@ -83,9 +97,9 @@
 		</div>
 
 		<!-- skills -->
-		<div class="row parallax-window2 py-3 my-5" data-parallax="scroll" data-image-src="image/bg-2.jpg">
+		<div id="skills" class="row parallax-window2 py-5" data-parallax="scroll" data-image-src="image/bg-2.jpg">
 			<div class="col-8 offset-2">
-				<section id="skills" class="my-5 py-5">
+				<section class="my-5 py-5">
 					<div class="h2 text-center"><strong>Web Skills</strong></div>
 					<div class="row">
 						<div class="col-lg-4 my-4">
@@ -138,21 +152,64 @@
 		</div>
 
 		<!-- works -->
-		<div class="row my-5 py-5">
+		<div class="row py-5" id="works">
 			<div class="col-8 offset-2">
-				<section class="mb-4" id="works">
+				<section class="mb-4">
 					<div class="h2 text-center">Works</div>
 					<div class="row">
 						<div class="col-lg-4 my-4">
-							<a href="https://wilightmoment.github.io/commerce/#/frontshop" class="a_nostyle">
-								<div class="card card-work text-center h-100">									
-										<img src="image/work1.png" alt="" class="img-fluid">
+							<a href="https://wilightmoment.github.io/commerce/#/frontshop" target="_blank" class="a_nostyle">
+								<div class="card card-work text-center h-100">
+									<img src="image/work1.png" alt="" class="img-fluid">
 								</div>
 							</a>
-						</div>												
+						</div>
 					</div>
 				</section>
 			</div>
+		</div>
+
+		<!-- contact -->
+		<div class="row py-5 parallax-window3" id="contact" data-parallax="scroll" data-image-src="image/bg-3.jpg">
+			<div class="col-12 mb-5">
+				<div class="h2 text-center text-white">
+					<strong>Contact</strong>
+				</div>
+			</div>
+			<div class="col-md-3 offset-1 my-2 contact_info">
+				<p class="text-white">有任何問題歡迎寄給我~</p>
+				<div class="text-white">
+					<i class="fas fa-mobile-alt"></i> +886 966068326<br>
+					<div class="mt-3">
+						<i class="fas fa-map-marker-alt"></i> Yunlin City, Taiwan
+					</div>
+					<div class="mt-3">
+						<i class="fas fa-envelope"></i> 40341135@gm.nfu.edu.tw
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7 my-2">
+				<form action="mailto:40341135@gm.nfu.edu.tw" method="post" enctype="text/plain">
+					<div class="form-group">
+						<input type="text" class="form-control" id="InputName" aria-describedby="emailHelp" placeholder="Your Name" required>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Your Email" required>
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" id="FormControlTextarea" rows="5" placeholder="Message" required></textarea>
+					</div>
+					<div class="d-flex">
+						<button type="reset" class="btn btn-outline-warning mr-auto">
+							<i class="fas fa-trash mr-2"></i>Reset
+						</button>
+						<button type="submit" class="btn btn-outline-info">
+							<i class="fas fa-paper-plane mr-2"></i>Send
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-1"></div>
 		</div>
 	</div>
 	<div class="footer bg-secondary py-5 text-center">
@@ -169,7 +226,7 @@
 		</div>
 		<div class="author mt-4">
 			<div class="h4 text-white">
-					<i class="far fa-copyright mr-1"></i>2018 Ying Ran,Chen a777441a@gmail.com
+				<i class="far fa-copyright mr-1"></i>2018 Ying Ran,Chen 40341135@gm.nfu.edu.tw
 			</div>
 		</div>
 

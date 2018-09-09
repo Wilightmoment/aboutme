@@ -6,6 +6,7 @@ $(document).ready(function(){
 	//parallax
 	$('.parallax-window').parallax({imageSrc: 'image/bg-1.jpg'});
 	$('.parallax-window2').parallax({imageSrc: 'image/bg-2.jpg'});
+	$('.parallax-window3').parallax({imageSrc: 'image/bg-3.jpg'});
 		
 	$(document).on("scroll", onScroll);	
 
