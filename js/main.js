@@ -4,7 +4,7 @@ $(document).ready(function(){
 		$('[data-toggle="tooltip"]').tooltip()
 	});
 
-	$('.parallax-window').parallax({imageSrc: '/image/window01.jpg'});
+	$('.parallax-window').parallax({imageSrc: 'image/bg-1.jpg'});
 	console.log('ready');
 	$(document).on("scroll", onScroll);
 	
