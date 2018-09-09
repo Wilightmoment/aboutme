@@ -29,9 +29,9 @@ $(document).ready(function(){
 		let target = this.hash;
 		$target = $(target);
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top-100
+            'scrollTop': $target.offset().top-105
         }, 550, 'swing', function () {
-			window.location.hash = target+100;
+			window.location.hash = target+105;
 			// console.log(target)
             $(document).on("scroll", onScroll);
         });
