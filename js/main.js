@@ -14,7 +14,7 @@ $(document).ready(function(){
 		e.preventDefault();		
 		$(document).off("scroll");
 
-		$('a').each(function() {			
+		$('a').each(function() {
 			if($(this).parent().hasClass('nav-item')){
 				$(this).parent().removeClass('active')
 			}
@@ -32,24 +32,19 @@ $(document).ready(function(){
             'scrollTop': $target.offset().top-105
         }, 550, 'swing', function () {
 			window.location.hash = target+105;
-			// console.log(target)
             $(document).on("scroll", onScroll);
         });
 	});	
 	
 });
 
-// 針對目前位置對sidebar做出變化
+// 針對目前位置對navbar做出變化
 function onScroll(event){
 	let scrollPos = $(document).scrollTop();
-	// console.log('scrollPos', scrollPos)	
-
 	//上方導覽列
 	$(".navbar-nav>li>a").each(function() {
-		let currentLink = $(this);		
-		let refElement = $(currentLink.attr('href'));		
-		// console.log('refElement.postion', refElement.offset().top)
-		// console.log('refElement.height', refElement.height())
+		let currentLink = $(this);
+		let refElement = $(currentLink.attr('href'));
 		if(refElement.offset().top <= scrollPos+330 && refElement.offset().top + refElement.height() > scrollPos+330){
 			$('.navbar-nav>li').removeClass('active');
 			currentLink.parent().addClass('active')
