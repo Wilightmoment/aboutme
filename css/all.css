@@ -153,6 +153,11 @@ h1{
 	padding-left: 0.75rem;
 	background: linear-gradient(to right, #E44D26, white);
 }
+.js{
+	border-radius: 2rem 0;
+	padding-left: 0.75rem;
+	background: linear-gradient(to right, rgb(190, 38, 228), white);
+}
 
 /* footer */
 .outerfoot a {
